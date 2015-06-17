@@ -28,13 +28,13 @@ function hideDeletedElement() {
 }
 
 function hideAddElement() {
-  lastLink = document.getElementById('last-button');
-  lastLink.parentElement.parentElement.hidden = true;
+  var lastLink = $('#last-button');
+  lastLink.closest(".association.container").hide();
 }
 
 function showAddElement() {
-  lastLink = document.getElementById('last-button');
-  lastLink.parentElement.parentElement.hidden = false;
+  var lastLink = $('#last-button');
+  lastLink.closest(".association.container").show();
 }
 
 function smoothScroll() {
@@ -44,5 +44,7 @@ function smoothScroll() {
     return false;
   });
 }
+
+// $('#assignmentModal').modal(options)
 
 $(smoothScroll);

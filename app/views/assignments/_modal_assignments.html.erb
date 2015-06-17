@@ -1,0 +1,18 @@
+<div id="assignment-modal<%=assignment.id%>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="assignmentModal" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="assignmentModal">Assignment</h3>
+  </div>
+  <div class="modal-body">
+    <%= form_for(assignment) do |f| %>
+    <%= f.label :active_at %>
+    <%= f.date_field :active_at %>
+    <%= f.label :due_at %>
+    <%= f.date_field :due_at %>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary"><%= f.submit %></button>
+  </div>
+  <% end %>
+</div>
