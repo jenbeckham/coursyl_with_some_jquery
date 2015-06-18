@@ -6,9 +6,11 @@
   <div class="modal-body">
     <%= form_for(assignment) do |f| %>
     <%= f.label :active_at %>
-    <%= f.date_field :active_at %>
+    <%= f.datetime_field :active_at %>
+    <i class="fa fa-calendar"></i>
     <%= f.label :due_at %>
-    <%= f.date_field :due_at %>
+    <%= f.datetime_field :due_at  %>
+    <i class="fa fa-calendar"></i>
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
